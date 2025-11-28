@@ -244,6 +244,913 @@
             }
         }
 
+        /* Lightning Effects for All Sections */
+        .lightning-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .lightning {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            opacity: 0;
+            animation: lightningFlash 8s infinite;
+        }
+
+        .lightning-1 {
+            width: 2px;
+            height: 100%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .lightning-2 {
+            width: 1px;
+            height: 80%;
+            left: 45%;
+            top: 10%;
+            animation-delay: 2s;
+        }
+
+        .lightning-3 {
+            width: 3px;
+            height: 120%;
+            left: 70%;
+            top: -10%;
+            animation-delay: 4s;
+        }
+
+        .lightning-4 {
+            width: 1.5px;
+            height: 90%;
+            left: 85%;
+            top: 5%;
+            animation-delay: 6s;
+        }
+
+        .lightning-5 {
+            width: 2px;
+            height: 110%;
+            left: 10%;
+            top: -5%;
+            animation-delay: 1s;
+        }
+
+        .lightning-6 {
+            width: 1px;
+            height: 70%;
+            left: 60%;
+            top: 15%;
+            animation-delay: 3s;
+        }
+
+        .lightning-7 {
+            width: 2.5px;
+            height: 95%;
+            left: 35%;
+            top: 2%;
+            animation-delay: 5s;
+        }
+
+        .lightning-8 {
+            width: 1.2px;
+            height: 85%;
+            left: 80%;
+            top: 8%;
+            animation-delay: 7s;
+        }
+
+        @keyframes lightningFlash {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            1% {
+                opacity: 0.8;
+                transform: translateY(0);
+            }
+            2% {
+                opacity: 0.3;
+            }
+            3% {
+                opacity: 0.8;
+            }
+            4% {
+                opacity: 0.2;
+            }
+            5% {
+                opacity: 0.7;
+            }
+            6% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+        }
+
+        /* Pink Lightning Bolts */
+        .pink-lightning {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(255, 182, 193, 0.7), rgba(255, 105, 180, 0.9), rgba(255, 182, 193, 0.7), transparent);
+            opacity: 0;
+            animation: pinkLightningFlash 12s infinite;
+            filter: blur(1px);
+        }
+
+        .pink-lightning-1 {
+            width: 3px;
+            height: 120%;
+            left: 15%;
+            top: -10%;
+            animation-delay: 0s;
+        }
+
+        .pink-lightning-2 {
+            width: 2px;
+            height: 100%;
+            left: 40%;
+            animation-delay: 3s;
+        }
+
+        .pink-lightning-3 {
+            width: 4px;
+            height: 110%;
+            left: 65%;
+            top: -5%;
+            animation-delay: 6s;
+        }
+
+        .pink-lightning-4 {
+            width: 2.5px;
+            height: 90%;
+            left: 90%;
+            top: 5%;
+            animation-delay: 9s;
+        }
+
+        .pink-lightning-5 {
+            width: 3px;
+            height: 130%;
+            left: 25%;
+            top: -15%;
+            animation-delay: 1.5s;
+        }
+
+        .pink-lightning-6 {
+            width: 1.5px;
+            height: 80%;
+            left: 55%;
+            top: 10%;
+            animation-delay: 4.5s;
+        }
+
+        .pink-lightning-7 {
+            width: 3.5px;
+            height: 105%;
+            left: 75%;
+            top: -2%;
+            animation-delay: 7.5s;
+        }
+
+        @keyframes pinkLightningFlash {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(-100%) rotate(5deg);
+            }
+            1% {
+                opacity: 0.9;
+                transform: translateY(0) rotate(5deg);
+            }
+            2% {
+                opacity: 0.4;
+            }
+            3% {
+                opacity: 0.8;
+            }
+            4% {
+                opacity: 0.3;
+            }
+            5% {
+                opacity: 0.7;
+            }
+            6% {
+                opacity: 0.2;
+            }
+            7% {
+                opacity: 0.6;
+            }
+            8% {
+                opacity: 0;
+                transform: translateY(100%) rotate(5deg);
+            }
+        }
+
+        /* Circular Lightning Effects */
+        .circle-lightning {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+            opacity: 0;
+            animation: circleFlash 15s infinite;
+        }
+
+        .circle-lightning-1 {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .circle-lightning-2 {
+            width: 150px;
+            height: 150px;
+            top: 70%;
+            left: 80%;
+            animation-delay: 5s;
+        }
+
+        .circle-lightning-3 {
+            width: 180px;
+            height: 180px;
+            top: 40%;
+            left: 20%;
+            animation-delay: 10s;
+        }
+
+        .circle-lightning-4 {
+            width: 120px;
+            height: 120px;
+            top: 80%;
+            left: 40%;
+            animation-delay: 2s;
+        }
+
+        .circle-lightning-5 {
+            width: 220px;
+            height: 220px;
+            top: 20%;
+            left: 70%;
+            animation-delay: 7s;
+        }
+
+        @keyframes circleFlash {
+            0%, 96%, 100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            97% {
+                opacity: 0.7;
+                transform: scale(1);
+            }
+            98% {
+                opacity: 0.4;
+                transform: scale(1.1);
+            }
+            99% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Pink Circle Lightning */
+        .pink-circle-lightning {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.6) 0%, rgba(255, 105, 180, 0.4) 30%, transparent 70%);
+            opacity: 0;
+            animation: pinkCircleFlash 18s infinite;
+        }
+
+        .pink-circle-lightning-1 {
+            width: 180px;
+            height: 180px;
+            top: 15%;
+            left: 85%;
+            animation-delay: 0s;
+        }
+
+        .pink-circle-lightning-2 {
+            width: 220px;
+            height: 220px;
+            top: 65%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+
+        .pink-circle-lightning-3 {
+            width: 160px;
+            height: 160px;
+            top: 35%;
+            left: 60%;
+            animation-delay: 12s;
+        }
+
+        .pink-circle-lightning-4 {
+            width: 140px;
+            height: 140px;
+            top: 75%;
+            left: 75%;
+            animation-delay: 3s;
+        }
+
+        .pink-circle-lightning-5 {
+            width: 200px;
+            height: 200px;
+            top: 25%;
+            left: 35%;
+            animation-delay: 9s;
+        }
+
+        @keyframes pinkCircleFlash {
+            0%, 94%, 100% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            95% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            96% {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+            97% {
+                opacity: 0.3;
+                transform: scale(1.2);
+            }
+            98% {
+                opacity: 0.1;
+                transform: scale(1.3);
+            }
+        }
+
+        /* Section-specific lightning containers */
+        .hero-lightning {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .about-lightning {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .experience-lightning {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .education-lightning {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .contact-lightning {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Thunder Effects */
+.thunder-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.thunder-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    opacity: 0;
+    z-index: 0;
+}
+
+.thunder-bolt {
+    position: absolute;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.9) 20%, 
+        rgba(255, 255, 255, 0.7) 50%, 
+        rgba(255, 182, 193, 0.8) 80%, 
+        transparent 100%);
+    opacity: 0;
+    filter: blur(1px);
+    transform: rotate(var(--rotation, 0deg));
+}
+
+.thunder-bolt-1 {
+    width: 3px;
+    height: 150%;
+    top: -25%;
+    left: 15%;
+    --rotation: 5deg;
+    animation: thunderStrike1 15s infinite;
+}
+
+.thunder-bolt-2 {
+    width: 2px;
+    height: 120%;
+    top: -10%;
+    left: 45%;
+    --rotation: -3deg;
+    animation: thunderStrike2 18s infinite;
+}
+
+.thunder-bolt-3 {
+    width: 4px;
+    height: 140%;
+    top: -20%;
+    left: 75%;
+    --rotation: 7deg;
+    animation: thunderStrike3 20s infinite;
+}
+
+.thunder-bolt-4 {
+    width: 2.5px;
+    height: 130%;
+    top: -15%;
+    left: 30%;
+    --rotation: -5deg;
+    animation: thunderStrike4 22s infinite;
+}
+
+.thunder-bolt-5 {
+    width: 3px;
+    height: 160%;
+    top: -30%;
+    left: 60%;
+    --rotation: 4deg;
+    animation: thunderStrike5 25s infinite;
+}
+
+/* Pink Thunder Bolts */
+.pink-thunder {
+    position: absolute;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 182, 193, 0.9) 20%, 
+        rgba(255, 105, 180, 0.8) 50%, 
+        rgba(218, 112, 214, 0.7) 80%, 
+        transparent 100%);
+    opacity: 0;
+    filter: blur(1.5px);
+    transform: rotate(var(--rotation, 0deg));
+}
+
+.pink-thunder-1 {
+    width: 4px;
+    height: 140%;
+    top: -20%;
+    left: 25%;
+    --rotation: -2deg;
+    animation: pinkThunder1 16s infinite;
+}
+
+.pink-thunder-2 {
+    width: 3px;
+    height: 130%;
+    top: -15%;
+    left: 55%;
+    --rotation: 6deg;
+    animation: pinkThunder2 19s infinite;
+}
+
+.pink-thunder-3 {
+    width: 2px;
+    height: 150%;
+    top: -25%;
+    left: 85%;
+    --rotation: -4deg;
+    animation: pinkThunder3 21s infinite;
+}
+
+/* Thunder Flash Animations */
+@keyframes thunderFlash {
+    0%, 95%, 100% {
+        background: rgba(255, 255, 255, 0);
+        opacity: 0;
+    }
+    96% {
+        background: rgba(255, 255, 255, 0.3);
+        opacity: 0.8;
+    }
+    97% {
+        background: rgba(255, 255, 255, 0.2);
+        opacity: 0.6;
+    }
+    98% {
+        background: rgba(255, 255, 255, 0.1);
+        opacity: 0.4;
+    }
+    99% {
+        background: rgba(255, 255, 255, 0.05);
+        opacity: 0.2;
+    }
+}
+
+@keyframes pinkThunderFlash {
+    0%, 92%, 100% {
+        background: rgba(255, 182, 193, 0);
+        opacity: 0;
+    }
+    93% {
+        background: rgba(255, 182, 193, 0.4);
+        opacity: 0.9;
+    }
+    94% {
+        background: rgba(255, 105, 180, 0.3);
+        opacity: 0.7;
+    }
+    95% {
+        background: rgba(218, 112, 214, 0.2);
+        opacity: 0.5;
+    }
+    96% {
+        background: rgba(138, 43, 226, 0.1);
+        opacity: 0.3;
+    }
+}
+
+/* Thunder Bolt Animations */
+@keyframes thunderStrike1 {
+    0%, 90%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(5deg);
+    }
+    91% {
+        opacity: 1;
+        transform: translateY(0%) rotate(5deg);
+    }
+    92% {
+        opacity: 0.8;
+    }
+    93% {
+        opacity: 0.9;
+    }
+    94% {
+        opacity: 0.6;
+    }
+    95% {
+        opacity: 0.3;
+    }
+    96% {
+        opacity: 0;
+        transform: translateY(100%) rotate(5deg);
+    }
+}
+
+@keyframes thunderStrike2 {
+    0%, 88%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(-3deg);
+    }
+    89% {
+        opacity: 1;
+        transform: translateY(0%) rotate(-3deg);
+    }
+    90% {
+        opacity: 0.7;
+    }
+    91% {
+        opacity: 0.9;
+    }
+    92% {
+        opacity: 0.5;
+    }
+    93% {
+        opacity: 0.2;
+    }
+    94% {
+        opacity: 0;
+        transform: translateY(100%) rotate(-3deg);
+    }
+}
+
+@keyframes thunderStrike3 {
+    0%, 85%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(7deg);
+    }
+    86% {
+        opacity: 1;
+        transform: translateY(0%) rotate(7deg);
+    }
+    87% {
+        opacity: 0.8;
+    }
+    88% {
+        opacity: 0.6;
+    }
+    89% {
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    91% {
+        opacity: 0;
+        transform: translateY(100%) rotate(7deg);
+    }
+}
+
+@keyframes thunderStrike4 {
+    0%, 92%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(-5deg);
+    }
+    93% {
+        opacity: 1;
+        transform: translateY(0%) rotate(-5deg);
+    }
+    94% {
+        opacity: 0.7;
+    }
+    95% {
+        opacity: 0.9;
+    }
+    96% {
+        opacity: 0.5;
+    }
+    97% {
+        opacity: 0.3;
+    }
+    98% {
+        opacity: 0;
+        transform: translateY(100%) rotate(-5deg);
+    }
+}
+
+@keyframes thunderStrike5 {
+    0%, 87%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(4deg);
+    }
+    88% {
+        opacity: 1;
+        transform: translateY(0%) rotate(4deg);
+    }
+    89% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    91% {
+        opacity: 0.9;
+    }
+    92% {
+        opacity: 0.4;
+    }
+    93% {
+        opacity: 0.2;
+    }
+    94% {
+        opacity: 0;
+        transform: translateY(100%) rotate(4deg);
+    }
+}
+
+/* Pink Thunder Animations */
+@keyframes pinkThunder1 {
+    0%, 89%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(-2deg);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0%) rotate(-2deg);
+    }
+    91% {
+        opacity: 0.8;
+    }
+    92% {
+        opacity: 0.9;
+    }
+    93% {
+        opacity: 0.6;
+    }
+    94% {
+        opacity: 0.3;
+    }
+    95% {
+        opacity: 0;
+        transform: translateY(100%) rotate(-2deg);
+    }
+}
+
+@keyframes pinkThunder2 {
+    0%, 86%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(6deg);
+    }
+    87% {
+        opacity: 2;
+        transform: translateY(0%) rotate(6deg);
+    }
+    88% {
+        opacity: 0.7;
+    }
+    89% {
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    91% {
+        opacity: 0.2;
+    }
+    92% {
+        opacity: 0;
+        transform: translateY(100%) rotate(6deg);
+    }
+}
+
+@keyframes pinkThunder3 {
+    0%, 91%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(-4deg);
+    }
+    92% {
+        opacity: 3;
+        transform: translateY(0%) rotate(-4deg);
+    }
+    93% {
+        opacity: 0.8;
+    }
+    94% {
+        opacity: 0.6;
+    }
+    95% {
+        opacity: 0.9;
+    }
+    96% {
+        opacity: 0.4;
+    }
+    97% {
+        opacity: 0.1;
+    }
+    98% {
+        opacity: 0;
+        transform: translateY(100%) rotate(-4deg);
+    }
+}
+
+/* Section-specific thunder containers */
+.hero-thunder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.about-thunder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.experience-thunder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.education-thunder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact-thunder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+        /* WhatsApp Button with Lightning Effect */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            overflow: hidden;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+        }
+
+        .whatsapp-btn img {
+            width: 35px;
+            height: 35px;
+            filter: brightness(0) invert(1);
+            z-index: 2;
+            position: relative;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: lightning 3s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @keyframes lightning {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
         /* Header & Navigation */
         header {
             background-color: rgba(44, 19, 75, 0.95);
@@ -426,27 +1333,50 @@
             100% { background-position: 0% 50%; }
         }
 
-        .typewriter {
-            color: var(--text-color);
-            font-size: 1.8rem;
-            font-weight: 300;
-            width: fit-content;
-            overflow: hidden;
-            border-right: 2px solid var(--primary-color);
-            white-space: nowrap;
-            margin: 0 auto 2.5rem;
-            animation: typing 3.5s steps(40, end), blink 1s step-end infinite;
-            letter-spacing: 1px;
-        }
+      .typewriter {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 300;
+    width: fit-content;
+    overflow: hidden;
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    margin: 0 auto 2.5rem;
+    animation: typing 3.5s steps(40, end), blink 1s step-end infinite;
+    letter-spacing: 1px;
+    max-width: 90%;
+    text-align: center;
+}
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
 
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+    .typewriter {
+        font-size: 1.4rem;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: none;
+        width: auto;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 576px) {
+    .typewriter {
+        font-size: 1.2rem;
+        margin: 0 auto 2rem;
+    }
+} 
 
         .hero-btns {
             display: flex;
@@ -1193,6 +2123,19 @@
                 width: 80%;
                 margin-bottom: 10px;
             }
+            
+            /* WhatsApp button mobile adjustments */
+            .whatsapp-btn {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            .whatsapp-btn img {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1215,7 +2158,55 @@
             .experience-grid {
                 grid-template-columns: 1fr;
             }
+            
+            /* WhatsApp button small mobile adjustments */
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                left: 15px;
+            }
+            
+            .whatsapp-btn img {
+                width: 28px;
+                height: 28px;
+            }
         }
+        /* Simple Star Blinking Background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+.star:nth-child(odd) {
+    background-color: #ffb6c1; /* Light pink */
+}
+
+.star:nth-child(even) {
+    background-color: white;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
     </style>
 </head>
 <body>
@@ -1230,6 +2221,11 @@
         <div class="stars" id="stars"></div>
     </div>
 
+    <!-- WhatsApp Button with Lightning Effect -->
+    <a href="https://wa.me/919443662238" class="whatsapp-btn" target="_blank" aria-label="Contact on WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
     <!-- Header & Navigation -->
     <header>
         <div class="container">
@@ -1239,7 +2235,7 @@
                         <div class="avatar-wrap" aria-hidden="false">
                             <div class="avatar">
                                 <!-- Placeholder for profile image -->
-                                <img src="https://raketcontent.com/small_Purple_and_Pink_Gradient_3_D_Y2_K_Graphic_Designer_Portfolio_Cover_Document_20240823_140400_0000_9b83065dac.png" alt="Profile photo of R Shakthe" />
+                                <img src=".dpimage.jpg" alt="Profile photo of R Shakthe" />
                             </div>
                         </div>
                     </div>
@@ -1272,7 +2268,23 @@
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Hero Lightning Effects -->
+        <div class="hero-lightning">
+            <div class="lightning lightning-1"></div>
+            <div class="lightning lightning-2"></div>
+            <div class="pink-lightning pink-lightning-1"></div>
+            <div class="pink-lightning pink-lightning-2"></div>
+            <div class="circle-lightning circle-lightning-1"></div>
+            <div class="pink-circle-lightning pink-circle-lightning-1"></div>
+        </div>
+    
+    <div class="hero-thunder">
+    <div class="thunder-flash" style="animation: thunderFlash 25s infinite;"></div>
+    <div class="thunder-bolt thunder-bolt-1"></div>
+    <div class="thunder-bolt thunder-bolt-2"></div>
+    <div class="pink-thunder pink-thunder-1"></div>
+</div>
+</section>
 
     <!-- About Section -->
     <section class="section about" id="about">
@@ -1302,6 +2314,20 @@
                 </div>
             </div>
         </div>
+        <!-- About Lightning Effects -->
+        <div class="about-lightning">
+            <div class="lightning lightning-3"></div>
+            <div class="lightning lightning-4"></div>
+            <div class="pink-lightning pink-lightning-3"></div>
+            <div class="pink-lightning pink-lightning-4"></div>
+            <div class="circle-lightning circle-lightning-2"></div>
+            <div class="pink-circle-lightning pink-circle-lightning-2"></div>
+        </div>
+        <div class="about-thunder">
+    <div class="thunder-flash" style="animation: pinkThunderFlash 28s infinite;"></div>
+    <div class="thunder-bolt thunder-bolt-3"></div>
+    <div class="pink-thunder pink-thunder-2"></div>
+</div>
     </section>
 
     <!-- Experience Section -->
@@ -1486,6 +2512,21 @@
                 </div>
             </div>
         </div>
+        <!-- Experience Lightning Effects -->
+        <div class="experience-lightning">
+            <div class="lightning lightning-5"></div>
+            <div class="lightning lightning-6"></div>
+            <div class="pink-lightning pink-lightning-5"></div>
+            <div class="pink-lightning pink-lightning-6"></div>
+            <div class="circle-lightning circle-lightning-3"></div>
+            <div class="pink-circle-lightning pink-circle-lightning-3"></div>
+        </div>
+        <div class="experience-thunder">
+    <div class="thunder-flash" style="animation: thunderFlash 30s infinite;"></div>
+    <div class="thunder-bolt thunder-bolt-4"></div>
+    <div class="thunder-bolt thunder-bolt-5"></div>
+    <div class="pink-thunder pink-thunder-3"></div>
+</div>
     </section>
 
     <!-- Education Section -->
@@ -1507,7 +2548,7 @@
 * Gained foundational knowledge of HTML, CSS, JavaScript, React.js, Node.js.
 * Understood how simple web pages and user interfaces are built.
 </p>
-<a href="#" class="btn experience-link">Certificate</a>
+<a href=".nmcertificate.pdf" class="btn experience-link">Certificate</a>
                     </div>
                 </div>
                  <div class="timeline-item">
@@ -1518,11 +2559,9 @@
                         <p>
 
 * Successfully completed Junior and Senior English Typewriting, gaining strong typing accuracy and speed.
-* Trained in structured keyboard practice, improving efficiency in written communication.
 * Developed precise typing skills that help in documentation, coding, and day-to-day digital tasks.
-* Enhanced my ability to type error-free content with better focus and consistency.
 </p>
-<a href="#" class="btn experience-link">Certificate</a>
+<a href=".typingcertificate.pdf" class="btn experience-link">Certificate</a>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -1540,7 +2579,7 @@
                         <h3>Higher Secondary School</h3>
                         <h4>Sri Kumaraguruparar Matric Higher Secondary School</h4>
                         <p>Graduated with honors in Maths with Biology stream but Iam interested in Computer Science. Participated in various coding competitions and tech events.</p>
-                        <a href="#" class="btn experience-link">Marksheet</a>
+                        <a href=".12thmarksheet.pdf" class="btn experience-link">Marksheet</a>
                     </div>
                 </div>
                  <div class="timeline-item">
@@ -1549,11 +2588,25 @@
                         <h3>High School</h3>
                         <h4>Government High School</h4>
                         <p>10th complete! Now stepping into 11th & 12th with new dreams.</p>
-                        <a href="#" class="btn experience-link">Marksheet</a>
+                        <a href=".10thmarksheet.pdf" class="btn experience-link">Marksheet</a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Education Lightning Effects -->
+        <div class="education-lightning">
+            <div class="lightning lightning-7"></div>
+            <div class="lightning lightning-8"></div>
+            <div class="pink-lightning pink-lightning-7"></div>
+            <div class="circle-lightning circle-lightning-4"></div>
+            <div class="pink-circle-lightning pink-circle-lightning-4"></div>
+        </div>
+        <div class="education-thunder">
+    <div class="thunder-flash" style="animation: pinkThunderFlash 32s infinite;"></div>
+    <div class="thunder-bolt thunder-bolt-1"></div>
+    <div class="pink-thunder pink-thunder-1"></div>
+    <div class="pink-thunder pink-thunder-2"></div>
+</div>
     </section>
 
     <!-- Contact Section -->
@@ -1613,6 +2666,21 @@
                 </form>
             </div>
         </div>
+        <!-- Contact Lightning Effects -->
+        <div class="contact-lightning">
+            <div class="lightning lightning-1"></div>
+            <div class="lightning lightning-3"></div>
+            <div class="pink-lightning pink-lightning-2"></div>
+            <div class="pink-lightning pink-lightning-5"></div>
+            <div class="circle-lightning circle-lightning-5"></div>
+            <div class="pink-circle-lightning pink-circle-lightning-5"></div>
+        </div>
+        <div class="contact-thunder">
+    <div class="thunder-flash" style="animation: thunderFlash 35s infinite;"></div>
+    <div class="thunder-bolt thunder-bolt-2"></div>
+    <div class="thunder-bolt thunder-bolt-3"></div>
+    <div class="pink-thunder pink-thunder-3"></div>
+</div>
     </section>
 
     <!-- Footer -->
@@ -1634,6 +2702,27 @@
     </div>
 
     <script>
+
+        // Simple star generation
+function createStars() {
+    const starsContainer = document.querySelector('.stars');
+    const starCount = 150;
+    
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = Math.random() * 3 + 1 + 'px';
+        star.style.height = star.style.width;
+        star.style.animationDelay = Math.random() * 3 + 's';
+        
+        starsContainer.appendChild(star);
+    }
+}
+
+createStars();
         // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
