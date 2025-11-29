@@ -477,6 +477,53 @@
                 max-width: 100%;
                 line-height: 1.4;
             }
+            
+            /* Mobile Navigation Styles */
+            .mobile-nav {
+                transition: all 0.3s ease;
+            }
+            
+            .timeline-content {
+                margin-left: 0;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            .timeline-dot {
+                left: 4px;
+                transform: none;
+            }
+            
+            .education-timeline::before {
+                left: 16px;
+            }
+            
+            .education-timeline .timeline-item:nth-child(even) .timeline-content,
+            .education-timeline .timeline-item:nth-child(odd) .timeline-content {
+                margin-left: 0;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            .education-timeline .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 2rem;
+            }
+            
+            .education-timeline .timeline-dot {
+                position: absolute;
+                left: 16px;
+                top: 30px;
+                transform: none;
+            }
+            
+            .education-timeline .timeline-content {
+                margin-left: 3rem;
+                width: calc(100% - 3rem);
+            }
         }
 
         @media (max-width: 576px) {
@@ -631,7 +678,7 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Navigation - Fixed for Mobile -->
     <header class="fixed top-0 left-0 w-full bg-section-bg shadow-custom z-50 backdrop-blur-md" style="background-color: rgba(44, 19, 75, 0.95);">
         <div class="container mx-auto px-4 md:px-6 max-w-6xl">
             <nav class="navbar flex justify-between items-center py-4">
@@ -654,10 +701,20 @@
                     <li><a href="#education" class="text-text font-semibold transition-all duration-300 py-2 px-3 rounded relative">Education</a></li>
                     <li><a href="#contact" class="text-text font-semibold transition-all duration-300 py-2 px-3 rounded relative">Contact</a></li>
                 </ul>
-                <div class="hamburger block md:hidden text-xl cursor-pointer">
+                <div class="hamburger block md:hidden text-xl cursor-pointer text-white">
                     ☰
                 </div>
             </nav>
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-nav hidden md:hidden bg-section-bg py-4 border-t border-primary/30">
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#home" class="text-text font-semibold transition-all duration-300 py-2 px-3 rounded relative block text-center">Home</a></li>
+                    <li><a href="#about" class="text-text font-semibold transition-all duration-300 py-2 px-3 rounded relative block text-center">About</a></li>
+                    <li><a href="#experience" class="text-text font-semibold transition-all duration-300 py-2 px-3 rounded relative block text-center">Experience</a></li>
+                    <li><a href="#education" class="text-text font-semibold transition-all duration-300 py-2 px-3 rounded relative block text-center">Education</a></li>
+                    <li><a href="#contact" class="text-text font-semibold transition-all duration-300 py-2 px-3 rounded relative block text-center">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -949,138 +1006,137 @@
     </section>
 
    
-          <!-- Education Section -->
-    <section class="section education py-20 relative overflow-hidden" id="education" style="background: linear-gradient(135deg, #1a0b2e, #2c134b, #1a0b2e);">
-        <div class="container mx-auto px-4 md:px-6 max-w-6xl">
-            <div class="section-title text-center mb-12 relative">
-                <h2 class="text-3xl md:text-4xl font-bold text-light mb-4">Education & Skills</h2>
-                <div class="absolute bottom--2.5 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded"></div>
-            </div>
-            <div class="education-timeline relative max-w-4xl mx-auto z-10">
-                <!-- Timeline Line -->
-                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent rounded-lg shadow-lg shadow-primary/50"></div>
-                
-                <!-- Timeline Items -->
-                <div class="space-y-12">
-                    <!-- Item 1 -->
-                    <div class="timeline-item relative flex items-center w-full">
-                        <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
-                        
-                        <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pr-8">
-                            <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
-                                <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">Skill</span>
-                                <h3 class="text-xl font-bold text-text mb-2">Naan Mudalvan</h3>
-                                <h4 class="text-primary text-lg font-semibold mb-3">Overview of English Language Communication and Full STACK - Front End Development</h4>
-                                <p class="text-text-light leading-relaxed mb-4 text-base">
-                                    • Learned the basics of English communication and front-end development.<br>
-                                    • Improved my speaking and writing skills in English.<br>
-                                    • Gained foundational knowledge of HTML, CSS, JavaScript, React.js, Node.js.<br>
-                                    • Understood how simple web pages and user interfaces are built.
-                                </p>
-                                <a href="./nmcertificate.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Certificate</a>
-                            </div>
+         
+<!-- Education Section - Fixed for Mobile -->
+<section class="section education py-20 relative overflow-hidden" id="education" style="background: linear-gradient(135deg, #1a0b2e, #2c134b, #1a0b2e);">
+    <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+        <div class="section-title text-center mb-12 relative">
+            <h2 class="text-3xl md:text-4xl font-bold text-light mb-4">Education & Skills</h2>
+            <div class="absolute bottom--2.5 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded"></div>
+        </div>
+        <div class="education-timeline relative max-w-4xl mx-auto z-10">
+            <!-- Timeline Line -->
+            <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent rounded-lg shadow-lg shadow-primary/50"></div>
+            
+            <!-- Timeline Items -->
+            <div class="space-y-12">
+                <!-- Item 1 -->
+                <div class="timeline-item relative flex items-center w-full">
+                    <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
+                    
+                    <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pr-8">
+                        <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
+                            <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">Skill</span>
+                            <h3 class="text-xl font-bold text-text mb-2">Naan Mudalvan</h3>
+                            <h4 class="text-primary text-lg font-semibold mb-3">Overview of English Language Communication and Full STACK - Front End Development</h4>
+                            <p class="text-text-light leading-relaxed mb-4 text-base">
+                                • Learned the basics of English communication and front-end development.<br>
+                                • Improved my speaking and writing skills in English.<br>
+                                • Gained foundational knowledge of HTML, CSS, JavaScript, React.js, Node.js.<br>
+                                • Understood how simple web pages and user interfaces are built.
+                            </p>
+                            <a href="./nmcertificate.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Certificate</a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Item 2 -->
-                    <div class="timeline-item relative flex items-center w-full justify-end">
-                        <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
-                        
-                        <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pl-8">
-                            <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
-                                <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">Skill</span>
-                                <h3 class="text-xl font-bold text-text mb-2">Typewriting skill</h3>
-                                <h4 class="text-primary text-lg font-semibold mb-3">Completed both Junior and Senior in English</h4>
-                                <p class="text-text-light leading-relaxed mb-4 text-base">
-                                    • Successfully completed Junior and Senior English Typewriting.<br>
-                                    • Gained strong typing accuracy and speed.<br>
-                                    • Developed precise typing skills for documentation and coding.<br>
-                                    • Enhanced digital task efficiency.
-                                </p>
-                                <a href="./typingcertificate.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Certificate</a>
-                            </div>
+                <!-- Item 2 -->
+                <div class="timeline-item relative flex items-center w-full justify-end">
+                    <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
+                    
+                    <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pl-8">
+                        <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
+                            <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">Skill</span>
+                            <h3 class="text-xl font-bold text-text mb-2">Typewriting skill</h3>
+                            <h4 class="text-primary text-lg font-semibold mb-3">Completed both Junior and Senior in English</h4>
+                            <p class="text-text-light leading-relaxed mb-4 text-base">
+                                • Successfully completed Junior and Senior English Typewriting.<br>
+                                • Gained strong typing accuracy and speed.<br>
+                                • Developed precise typing skills for documentation and coding.<br>
+                            </p>
+                            <a href="./typingcertificate.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Certificate</a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Item 3 -->
-                    <div class="timeline-item relative flex items-center w-full">
-                        <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
-                        
-                        <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pr-8">
-                            <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
-                                <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">2024 - 2027</span>
-                                <h3 class="text-xl font-bold text-text mb-2">Bachelor of Science in Computer Application</h3>
-                                <h4 class="text-primary text-lg font-semibold mb-3">Bharathidasan University</h4>
-                                <p class="text-text-light leading-relaxed mb-4 text-base">
-                                    • GPA: 8.5/10<br>
-                                    • Relevant coursework: Data Structures, Algorithms, Database Systems<br>
-                                    • Web Development, Software Engineering<br>
-                                    • Expected Graduation: May 2027
-                                </p>
-                                <a href="#" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Degree Certificate</a>
-                            </div>
+                <!-- Item 3 -->
+                <div class="timeline-item relative flex items-center w-full">
+                    <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
+                    
+                    <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pr-8">
+                        <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
+                            <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">2024 - 2027</span>
+                            <h3 class="text-xl font-bold text-text mb-2">Bachelor of Science in Computer Application</h3>
+                            <h4 class="text-primary text-lg font-semibold mb-3">Bharathidasan University</h4>
+                            <p class="text-text-light leading-relaxed mb-4 text-base">
+                                • GPA: 8.5/10<br>
+                                • Relevant coursework: Data Structures, Algorithms, Database Systems<br>
+                                • Web Development, Software Engineering<br>
+                                • Expected Graduation: May 2027
+                            </p>
+                            <a href="#" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Degree Certificate</a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Item 4 -->
-                    <div class="timeline-item relative flex items-center w-full justify-end">
-                        <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
-                        
-                        <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pl-8">
-                            <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
-                                <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">2022 - 2024</span>
-                                <h3 class="text-xl font-bold text-text mb-2">Higher Secondary School</h3>
-                                <h4 class="text-primary text-lg font-semibold mb-3">Sri Kumaraguruparar Matric Higher Secondary School</h4>
-                                <p class="text-text-light leading-relaxed mb-4 text-base">
-                                    • Graduated with honors in Maths with Biology stream<br>
-                                    • Developed interest in Computer Science<br>
-                                    • Participated in various coding competitions<br>
-                                    • Active in tech events and workshops
-                                </p>
-                                <a href="./12thmarksheet.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Marksheet</a>
-                            </div>
+                <!-- Item 4 -->
+                <div class="timeline-item relative flex items-center w-full justify-end">
+                    <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
+                    
+                    <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pl-8">
+                        <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
+                            <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">2022 - 2024</span>
+                            <h3 class="text-xl font-bold text-text mb-2">Higher Secondary School</h3>
+                            <h4 class="text-primary text-lg font-semibold mb-3">Sri Kumaraguruparar Matric Higher Secondary School</h4>
+                            <p class="text-text-light leading-relaxed mb-4 text-base">
+                                • Graduated with honors in Maths with Biology stream<br>
+                                • Developed interest in Computer Science<br>
+                                • Participated in various coding competitions<br>
+                                • Active in tech events and workshops
+                            </p>
+                            <a href="./12thmarksheet.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Marksheet</a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Item 5 -->
-                    <div class="timeline-item relative flex items-center w-full">
-                        <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
-                        
-                        <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pr-8">
-                            <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
-                                <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">2017 - 2022</span>
-                                <h3 class="text-xl font-bold text-text mb-2">High School</h3>
-                                <h4 class="text-primary text-lg font-semibold mb-3">Government High School</h4>
-                                <p class="text-text-light leading-relaxed mb-4 text-base">
-                                    • Completed 10th standard with excellent academic record<br>
-                                    • Developed foundation in mathematics and sciences<br>
-                                    • Started exploring programming and technology<br>
-                                    • Prepared for higher studies in computer science
-                                </p>
-                                <a href="./10thmarksheet.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Marksheet</a>
-                            </div>
+                <!-- Item 5 -->
+                <div class="timeline-item relative flex items-center w-full">
+                    <div class="timeline-dot absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-card-bg border-4 border-primary rounded-full z-10 shadow-lg shadow-primary/50 transition-all duration-300"></div>
+                    
+                    <div class="timeline-content ml-12 md:ml-0 md:w-5/12 md:pr-8">
+                        <div class="bg-card-bg/80 rounded-xl shadow-lg p-6 border border-primary/20 backdrop-blur-md transition-all duration-300 hover:transform hover:-translate-y-2">
+                            <span class="inline-block bg-primary/20 text-primary py-1 px-4 rounded-full text-sm font-bold mb-3 border border-primary/30">2017 - 2022</span>
+                            <h3 class="text-xl font-bold text-text mb-2">High School</h3>
+                            <h4 class="text-primary text-lg font-semibold mb-3">Government High School</h4>
+                            <p class="text-text-light leading-relaxed mb-4 text-base">
+                                • Completed 10th standard with excellent academic record<br>
+                                • Developed foundation in mathematics and sciences<br>
+                                • Started exploring programming and technology<br>
+                            </p>
+                            <a href="./10thmarksheet.pdf" class="btn inline-block py-3 px-6 bg-gradient-primary text-white border-none rounded-full cursor-pointer text-sm font-semibold transition-all duration-300 tracking-wide shadow-custom-light relative overflow-hidden">Marksheet</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Education Lightning Effects -->
-        <div class="education-lightning absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-            <div class="lightning lightning-7 absolute w-1.25 h-9.5/10 left-1.75/5 top-1/50 opacity-0 animate-lightningFlash" style="animation-delay: 5s; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);"></div>
-            <div class="lightning lightning-8 absolute w-0.6 h-8.5/10 left-4/5 top-4/50 opacity-0 animate-lightningFlash" style="animation-delay: 7s; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);"></div>
-            <div class="pink-lightning pink-lightning-7 absolute w-1.75 h-5.25/5 top--1/50 left-3.75/5 opacity-0 animate-pinkLightningFlash" style="animation-delay: 7.5s; background: linear-gradient(90deg, transparent, rgba(255, 182, 193, 0.7), rgba(255, 105, 180, 0.9), rgba(255, 182, 193, 0.7), transparent); filter: blur(1px);"></div>
-            <div class="circle-lightning circle-lightning-4 absolute rounded-full w-28 h-28 top-4/5 left-2/5 opacity-0 animate-circleFlash" style="animation-delay: 2s; background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);"></div>
-            <div class="pink-circle-lightning pink-circle-lightning-4 absolute rounded-full w-34 h-34 top-3/4 left-3.75/5 opacity-0 animate-pinkCircleFlash" style="animation-delay: 3s; background: radial-gradient(circle, rgba(255, 182, 193, 0.6) 0%, rgba(255, 105, 180, 0.4) 30%, transparent 70%);"></div>
-        </div>
-        
-        <div class="education-thunder absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-            <div class="thunder-flash absolute top-0 left-0 w-full h-full bg-white/0 opacity-0 z-0" style="animation: pinkThunderFlash 32s infinite;"></div>
-            <div class="thunder-bolt thunder-bolt-1 absolute w-1.5 h-7.5/5 top--1.25/10 left-1/6 opacity-0 filter blur-sm" style="background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 182, 193, 0.8) 80%, transparent 100%); transform: rotate(5deg); animation: thunderStrike1 15s infinite;"></div>
-            <div class="pink-thunder pink-thunder-1 absolute w-2 h-7/5 top--1/5 left-1/4 opacity-0 filter blur-sm" style="background: linear-gradient(90deg, transparent 0%, rgba(255, 182, 193, 0.9) 20%, rgba(255, 105, 180, 0.8) 50%, rgba(218, 112, 214, 0.7) 80%, transparent 100%); transform: rotate(-2deg); animation: pinkThunder1 16s infinite;"></div>
-            <div class="pink-thunder pink-thunder-2 absolute w-1 h-6.5/5 top--1/10 left-2.75/5 opacity-0 filter blur-sm" style="background: linear-gradient(90deg, transparent 0%, rgba(255, 182, 193, 0.9) 20%, rgba(255, 105, 180, 0.8) 50%, rgba(218, 112, 214, 0.7) 80%, transparent 100%); transform: rotate(6deg); animation: pinkThunder2 19s infinite;"></div>
-        </div>
-    </section>
+    </div>
+    
+    <!-- Education Lightning Effects -->
+    <div class="education-lightning absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="lightning lightning-7 absolute w-1.25 h-9.5/10 left-1.75/5 top-1/50 opacity-0 animate-lightningFlash" style="animation-delay: 5s; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);"></div>
+        <div class="lightning lightning-8 absolute w-0.6 h-8.5/10 left-4/5 top-4/50 opacity-0 animate-lightningFlash" style="animation-delay: 7s; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);"></div>
+        <div class="pink-lightning pink-lightning-7 absolute w-1.75 h-5.25/5 top--1/50 left-3.75/5 opacity-0 animate-pinkLightningFlash" style="animation-delay: 7.5s; background: linear-gradient(90deg, transparent, rgba(255, 182, 193, 0.7), rgba(255, 105, 180, 0.9), rgba(255, 182, 193, 0.7), transparent); filter: blur(1px);"></div>
+        <div class="circle-lightning circle-lightning-4 absolute rounded-full w-28 h-28 top-4/5 left-2/5 opacity-0 animate-circleFlash" style="animation-delay: 2s; background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);"></div>
+        <div class="pink-circle-lightning pink-circle-lightning-4 absolute rounded-full w-34 h-34 top-3/4 left-3.75/5 opacity-0 animate-pinkCircleFlash" style="animation-delay: 3s; background: radial-gradient(circle, rgba(255, 182, 193, 0.6) 0%, rgba(255, 105, 180, 0.4) 30%, transparent 70%);"></div>
+    </div>
+    
+    <div class="education-thunder absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="thunder-flash absolute top-0 left-0 w-full h-full bg-white/0 opacity-0 z-0" style="animation: pinkThunderFlash 32s infinite;"></div>
+        <div class="thunder-bolt thunder-bolt-1 absolute w-1.5 h-7.5/5 top--1.25/10 left-1/6 opacity-0 filter blur-sm" style="background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 182, 193, 0.8) 80%, transparent 100%); transform: rotate(5deg); animation: thunderStrike1 15s infinite;"></div>
+        <div class="pink-thunder pink-thunder-1 absolute w-2 h-7/5 top--1/5 left-1/4 opacity-0 filter blur-sm" style="background: linear-gradient(90deg, transparent 0%, rgba(255, 182, 193, 0.9) 20%, rgba(255, 105, 180, 0.8) 50%, rgba(218, 112, 214, 0.7) 80%, transparent 100%); transform: rotate(-2deg); animation: pinkThunder1 16s infinite;"></div>
+        <div class="pink-thunder pink-thunder-2 absolute w-1 h-6.5/5 top--1/10 left-2.75/5 opacity-0 filter blur-sm" style="background: linear-gradient(90deg, transparent 0%, rgba(255, 182, 193, 0.9) 20%, rgba(255, 105, 180, 0.8) 50%, rgba(218, 112, 214, 0.7) 80%, transparent 100%); transform: rotate(6deg); animation: pinkThunder2 19s infinite;"></div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section class="section contact py-20 relative overflow-hidden" id="contact" style="background: linear-gradient(135deg, #1a0b2e, #2c134b, #1a0b2e);">
@@ -1199,21 +1255,16 @@
 
         // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+        const mobileNav = document.querySelector('.mobile-nav');
 
         hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('hidden');
-            navLinks.classList.toggle('flex');
-            navLinks.classList.toggle('md:flex');
+            mobileNav.classList.toggle('hidden');
         });
 
         // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    navLinks.classList.add('hidden');
-                    navLinks.classList.remove('flex');
-                }
+                mobileNav.classList.add('hidden');
             });
         });
 
