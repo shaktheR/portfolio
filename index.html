@@ -261,6 +261,10 @@
             color: var(--text-color);
             background-color: var(--dark-color);
             overflow-x: hidden;
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
         }
 
         .btn::before {
@@ -481,6 +485,130 @@
                 margin: 0 auto 2rem;
             }
         }
+
+        /* Star Effects */
+        .stars {
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) ease-in-out infinite;
+            opacity: var(--opacity);
+        }
+
+        .star:nth-child(odd) {
+            background: #ffb6c1; /* Light pink */
+        }
+
+        .star:nth-child(even) {
+            background: white;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Sparkle Effects */
+        .sparkle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: sparkle var(--duration) ease-in-out infinite;
+            opacity: 0;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1) rotate(180deg);
+            }
+        }
+
+        /* Particle Effects */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float var(--duration) ease-in-out infinite;
+            opacity: var(--opacity);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.2;
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px) rotate(90deg);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-40px) translateX(-10px) rotate(180deg);
+                opacity: 1;
+            }
+            75% {
+                transform: translateY(-20px) translateX(10px) rotate(270deg);
+                opacity: 0.8;
+            }
+        }
+
+        /* Typewriter Animation */
+        .typewriter-text {
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            50% { width: 100%; }
+            80% { width: 100%; }
+            100% { width: 0; }
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: var(--primary-color); }
+            50% { border-color: transparent; }
+        }
+
+        .typing {
+            animation: typing 6s steps(40, end) infinite, blink 1s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid var(--primary-color);
+        }
+
+        /* Profile picture fix */
+        .avatar {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body class="font-poppins bg-dark text-text">
@@ -575,257 +703,6 @@
         <div class="pink-thunder pink-thunder-1 absolute w-1 h-7/5 top--1/5 left-1/4 opacity-0 filter blur-sm" style="background: linear-gradient(90deg, transparent 0%, rgba(255, 182, 193, 0.9) 20%, rgba(255, 105, 180, 0.8) 50%, rgba(218, 112, 214, 0.7) 80%, transparent 100%); transform: rotate(-2deg); animation: pinkThunder1 16s infinite;"></div>
     </div>
 </section>
-
-<style>
-    /* Star Effects */
-    .stars {
-        pointer-events: none;
-    }
-
-    .star {
-        position: absolute;
-        background: white;
-        border-radius: 50%;
-        animation: twinkle var(--duration) ease-in-out infinite;
-        opacity: var(--opacity);
-    }
-
-    .star:nth-child(odd) {
-        background: #ffb6c1; /* Light pink */
-    }
-
-    .star:nth-child(even) {
-        background: white;
-    }
-
-    @keyframes twinkle {
-        0%, 100% {
-            opacity: 0.3;
-            transform: scale(1);
-        }
-        50% {
-            opacity: 1;
-            transform: scale(1.2);
-        }
-    }
-
-    /* Sparkle Effects */
-    .sparkle {
-        position: absolute;
-        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
-        border-radius: 50%;
-        animation: sparkle var(--duration) ease-in-out infinite;
-        opacity: 0;
-    }
-
-    @keyframes sparkle {
-        0%, 100% {
-            opacity: 0;
-            transform: scale(0) rotate(0deg);
-        }
-        50% {
-            opacity: 1;
-            transform: scale(1) rotate(180deg);
-        }
-    }
-
-    /* Particle Effects */
-    .particle {
-        position: absolute;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 50%;
-        animation: float var(--duration) ease-in-out infinite;
-        opacity: var(--opacity);
-    }
-
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0) translateX(0) rotate(0deg);
-            opacity: 0.2;
-        }
-        25% {
-            transform: translateY(-20px) translateX(10px) rotate(90deg);
-            opacity: 0.8;
-        }
-        50% {
-            transform: translateY(-40px) translateX(-10px) rotate(180deg);
-            opacity: 1;
-        }
-        75% {
-            transform: translateY(-20px) translateX(10px) rotate(270deg);
-            opacity: 0.8;
-        }
-    }
-
-    /* Typewriter Animation */
-    .typewriter-text {
-        font-family: 'Courier New', monospace;
-        letter-spacing: 1px;
-    }
-
-    @keyframes typing {
-        0% { width: 0; }
-        50% { width: 100%; }
-        80% { width: 100%; }
-        100% { width: 0; }
-    }
-
-    @keyframes blink {
-        0%, 100% { border-color: var(--primary-color); }
-        50% { border-color: transparent; }
-    }
-
-    .typing {
-        animation: typing 6s steps(40, end) infinite, blink 1s step-end infinite;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 2px solid var(--primary-color);
-    }
-</style>
-
-<script>
-    // Initialize all background effects
-    document.addEventListener('DOMContentLoaded', function() {
-        createStars();
-        createSparkles();
-        createParticles();
-        startTypewriter();
-    });
-
-    // Star Generation
-    function createStars() {
-        const starsContainer = document.getElementById('stars');
-        const starCount = 150;
-        
-        for (let i = 0; i < starCount; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            
-            const size = Math.random() * 3 + 1;
-            const duration = Math.random() * 5 + 3;
-            const opacity = Math.random() * 0.7 + 0.3;
-            
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.top = `${Math.random() * 100}%`;
-            star.style.setProperty('--duration', `${duration}s`);
-            star.style.setProperty('--opacity', opacity);
-            
-            starsContainer.appendChild(star);
-        }
-    }
-
-    // Sparkle Generation
-    function createSparkles() {
-        const sparklesContainer = document.getElementById('sparkles');
-        const sparkleCount = 30;
-        
-        for (let i = 0; i < sparkleCount; i++) {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-            
-            const size = Math.random() * 8 + 4;
-            const duration = Math.random() * 4 + 2;
-            const delay = Math.random() * 5;
-            
-            sparkle.style.width = `${size}px`;
-            sparkle.style.height = `${size}px`;
-            sparkle.style.left = `${Math.random() * 100}%`;
-            sparkle.style.top = `${Math.random() * 100}%`;
-            sparkle.style.animationDelay = `${delay}s`;
-            sparkle.style.setProperty('--duration', `${duration}s`);
-            
-            sparklesContainer.appendChild(sparkle);
-        }
-    }
-
-    // Particle Generation
-    function createParticles() {
-        const particlesContainer = document.getElementById('particles');
-        const particleCount = 50;
-        
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            
-            const size = Math.random() * 2 + 1;
-            const duration = Math.random() * 8 + 4;
-            const opacity = Math.random() * 0.5 + 0.1;
-            const delay = Math.random() * 5;
-            
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}%`;
-            particle.style.top = `${Math.random() * 100}%`;
-            particle.style.animationDelay = `${delay}s`;
-            particle.style.setProperty('--duration', `${duration}s`);
-            particle.style.setProperty('--opacity', opacity);
-            
-            particlesContainer.appendChild(particle);
-        }
-    }
-
-    // Typewriter Effect
-    function startTypewriter() {
-        const typewriterElement = document.getElementById('typewriter');
-        const texts = [
-            "Computer Science Student & Aspiring Software Developer",
-            "Passionate about Coding & Technology",
-            "Creating Innovative Solutions"
-        ];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typingSpeed = 100;
-        
-        function type() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                // Deleting text
-                typewriterElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-                typingSpeed = 50;
-            } else {
-                // Typing text
-                typewriterElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-                typingSpeed = 100;
-            }
-            
-            // Check if text is complete
-            if (!isDeleting && charIndex === currentText.length) {
-                // Pause at the end
-                typingSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                // Move to next text
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                typingSpeed = 500;
-            }
-            
-            setTimeout(type, typingSpeed);
-        }
-        
-        // Start the typewriter
-        setTimeout(type, 1000);
-    }
-
-    // Add hover effects to buttons
-    document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.05)';
-            this.style.boxShadow = '0 10px 30px rgba(138, 43, 226, 0.6)';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-            this.style.boxShadow = '0 4px 15px rgba(138, 43, 226, 0.4)';
-        });
-    });
-</script>
 
     <!-- About Section -->
     <section class="section about py-20 relative overflow-hidden" id="about" style="background: linear-gradient(135deg, rgba(26, 11, 46, 0.95), rgba(44, 19, 75, 0.9), rgba(26, 11, 46, 0.95));">
@@ -1638,6 +1515,135 @@
                 this.style.background = 'rgba(44, 19, 75, 0.7)';
             });
         });
+
+        // Initialize all background effects
+        document.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            createSparkles();
+            createParticles();
+            startTypewriter();
+        });
+
+        // Star Generation
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const size = Math.random() * 3 + 1;
+                const duration = Math.random() * 5 + 3;
+                const opacity = Math.random() * 0.7 + 0.3;
+                
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.setProperty('--duration', `${duration}s`);
+                star.style.setProperty('--opacity', opacity);
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Sparkle Generation
+        function createSparkles() {
+            const sparklesContainer = document.getElementById('sparkles');
+            const sparkleCount = 30;
+            
+            for (let i = 0; i < sparkleCount; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                
+                const size = Math.random() * 8 + 4;
+                const duration = Math.random() * 4 + 2;
+                const delay = Math.random() * 5;
+                
+                sparkle.style.width = `${size}px`;
+                sparkle.style.height = `${size}px`;
+                sparkle.style.left = `${Math.random() * 100}%`;
+                sparkle.style.top = `${Math.random() * 100}%`;
+                sparkle.style.animationDelay = `${delay}s`;
+                sparkle.style.setProperty('--duration', `${duration}s`);
+                
+                sparklesContainer.appendChild(sparkle);
+            }
+        }
+
+        // Particle Generation
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 2 + 1;
+                const duration = Math.random() * 8 + 4;
+                const opacity = Math.random() * 0.5 + 0.1;
+                const delay = Math.random() * 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.setProperty('--duration', `${duration}s`);
+                particle.style.setProperty('--opacity', opacity);
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Typewriter Effect
+        function startTypewriter() {
+            const typewriterElement = document.getElementById('typewriter');
+            const texts = [
+                "Computer Science Student & Aspiring Software Developer",
+                "Passionate about Coding & Technology",
+                "Creating Innovative Solutions"
+            ];
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+            
+            function type() {
+                const currentText = texts[textIndex];
+                
+                if (isDeleting) {
+                    // Deleting text
+                    typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    // Typing text
+                    typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 100;
+                }
+                
+                // Check if text is complete
+                if (!isDeleting && charIndex === currentText.length) {
+                    // Pause at the end
+                    typingSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    // Move to next text
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                    typingSpeed = 500;
+                }
+                
+                setTimeout(type, typingSpeed);
+            }
+            
+            // Start the typewriter
+            setTimeout(type, 1000);
+        }
     </script>
 </body>
 </html>
